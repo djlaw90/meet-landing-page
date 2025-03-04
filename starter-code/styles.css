@@ -11,6 +11,7 @@
 html {
     font-family: "Red Hat Display", sans-serif;
     font-optical-sizing: auto;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -18,7 +19,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 25px;
 }
 
 h1 {
@@ -34,18 +34,26 @@ p {
 .number-container {
     display: flex;
     justify-content: center;
+    margin-top: 100px;
     margin-bottom: 100px;
 }
 
 nav {
+    display: flex;
+    justify-content: center;
     margin-top: 8vh;
 }
 
 #hero {
     display: flex;
-    width: 100vw;
-    justify-content: space-between;
-    margin-bottom: 50px;
+    max-width: 1440px;
+    justify-content: space-around;
+    margin-top: 75px;
+    height: 35vh;
+}
+
+#what-is-it {
+    height: 650px;
 }
 
 .midpage-container {
@@ -57,10 +65,10 @@ nav {
 .hero-content, .midpage-content {
     display: flex;
     flex-direction: column;
-    align-self:center;
     text-align: center;
-    width: 400px;
-    gap: 25px;
+    position: relative;
+    width: 25%;
+    gap: 20px;
     margin-bottom: 100px;
 }
 
@@ -87,7 +95,9 @@ nav {
 }
 
 .hero-img {
-    width: 500px;
+    width: 33%;
+    max-width: 400px;
+    height: 400px;
 }
 
 .midpage-eyebrow {
@@ -118,24 +128,39 @@ nav {
     border-radius: 50%;
     border: 1px solid var(--slate-600);
     background: white;
+    font-weight: bold;
 }
 
   
 .number-circled::before {
     content: "";
     position: absolute;
-    top: -100px;
+    top: -75px;
     left: 50%;
     width: 1px;
-    height: 100px;
+    height: 75px;
     background: var(--slate-600);
     transform: translateX(-50%);
+}
+
+#section2.number-container {
+    margin-bottom: 0px;
+}
+
+#section2 {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    z-index: 2;
+    transform: translateY(75px);
 }
   
 
 footer {
+    position: relative;
     width: 100%;
     height: 400px;
+    margin-top: 200px;
 }
 
 .image-content {
@@ -152,7 +177,8 @@ footer {
 
 .image-content h2 {
     font-size: 3em;
-    width: 400px;
+    text-wrap: initial !important;
+    width: 500px;
     text-align: left;
 }
 
@@ -168,13 +194,17 @@ button {
 }
   
 .rounded-button {
-    color: white;
+    color: var(--white);
     border: none;
     padding: 15px 30px;
     font-size: 16px;
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.midpage-h2 {
+    font-size: 2em;
 }
   
   
